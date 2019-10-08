@@ -20,7 +20,23 @@
 
 # NPM Module
 ------------------------------
+* local npm modules , global npm modules
 * www.npmjs.com/package
 * initiallizing npm project: npm init
-* installing npm package: npm i (package name)@(version)
+* installing npm package: npm i (package name)@(version) -g<< globally installing npm module
 1. validator : validating emails , urls, phone numbers , social security numbers, credit cards and other types of string information
+2. chalk
+3. nodemon : nodemon app.js << 코드를 바꾸면 자동으로 terminal에서 실시간으로 바꿔주는 npm
+종료하기 : ctrl + c
+
+# aa
+----------------------------
+1. getting input from users
+ - node any.js add //이걸로 add 라는 action을 취할수있게 함
+ >> console.log(proccess.argv[2]) // array 이며 사용자가 입력한 값을 배열 형태로 보여줌
+ ex)
+ const command = process.argv[2] << add를 저장하고있음
+
+if (command === 'add') {
+    console.log('Adding note!')
+}

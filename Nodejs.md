@@ -33,11 +33,14 @@
 ----------------------------
 1. getting input from users
  - node any.js add //이걸로 add 라는 action을 취할수있게 함
- >> console.log(proccess.argv[2]) // array 이며 사용자가 입력한 값을 배열 형태로 보여줌
+ -> console.log(proccess.argv[2]) // array 이며 사용자가 입력한 값을 배열 형태로 보여줌
+ 
  EX)
  <pre><code>
  const command = process.argv[2] << add를 저장하고있음
 
 if (command === 'add') {
     console.log('Adding note!')
-}</code></pre>
+}
+terminal : node any.js add
+-> Adding note! 가 출력</code></pre>

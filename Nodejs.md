@@ -5,6 +5,7 @@
 * nodejs.org-->docs로 들어가면 여러가지 내장 함수들을 검색할수있다.
 * visual studio code를 이용할것이다.
 * node (file name).js 를 이용하여 terminal에서 execution 할수있다.
+* cd ../(folder name) << changing directory
 
 #문법
 -------------------------------
@@ -28,6 +29,16 @@
 2. chalk
 3. nodemon : nodemon app.js << 코드를 바꾸면 자동으로 terminal에서 실시간으로 바꿔주는 npm
 종료하기 : ctrl + c
+4. yargs : command line argument parsing npm module
+           Customizing yargs version : yargs.version('1.1.0') and execute node any.js --version int terminal
+EX)
+<pre><code>
+termianl : node any.js add(setting a function) --(adding options to the function)title="Things to buy"
+code: const yargs = require('yargs')
+console.log(yargs.argv)
+terminal : {_:[add],title:'Things to buy','$0':'any.js'}</pre></code>
+<pre><code>
+
 
 # aa
 ----------------------------

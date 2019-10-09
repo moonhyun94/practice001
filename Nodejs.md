@@ -6,8 +6,8 @@
 * visual studio code를 이용할것이다.
 * node (file name).js 를 이용하여 terminal에서 execution 할수있다.
 * cd ../(folder name) << changing directory
-
-#문법
+ 
+# 문법
 -------------------------------
 * const 변수이름 = 'data'// 변수 설정
 * console.log('hello') // 출력문
@@ -15,6 +15,8 @@
 - fs를 사용하기 위해선 const fs = require('fs') 를 해주어야만 한다!!
 - require()은 node 내부 module을 사용할때 적어줘야하고 const fs 라는 변수를 설정하여 return값을 넣어주는 역할을 한다. 
 - fs.appendFileSync('file name','data to append') // data를 추가해줌
+- fs.readFileSync('file name')
+- .toString() // data를 string 형태로 바꿈
 - 다른 파일 동기화 하려면 require('./file name')을 해주면 된다.다른 파일에 있는 변수 함수 등등..은 넘어가지않음!
 - 다른 파일에 있는 변수, 함수 등등.. 을 공유하고싶다면 module.exports = var name or func name 그리고 require('./file name') 의 return 값을 저장할 const var 를 설정해준다. ex) const name = require('./ustils.js')
 * 함수 const add = function(){}
@@ -39,8 +41,14 @@ console.log(yargs.argv)
 terminal : {_:[add],title:'Things to buy','$0':'any.js'}</pre></code>
 <pre><code>
 
-
-# aa
+# JSON
+----------------------------
+* JSON(JavaScript Object Notation) 
+- JSON은 string data만을 처리
+- JSON의 return 값은 binaray 이므로 return 값을 buffer라고 말함 
+- JSON.stringify(obect,array 등..) Object, Array 등을 JSON string으로 바꿔줌 
+- JSON.parse() JSON string을 Object, Array 등으로 반환해주는 작업
+# 활용
 ----------------------------
 1. getting input from users
  - node any.js add //이걸로 add 라는 action을 취할수있게 함

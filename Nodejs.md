@@ -39,7 +39,6 @@ termianl : node any.js add(setting a function) --(adding options to the function
 code: const yargs = require('yargs')
 console.log(yargs.argv)
 terminal : {_:[add],title:'Things to buy','$0':'any.js'}</pre></code>
-<pre><code>
 
 # JSON
 ----------------------------

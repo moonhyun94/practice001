@@ -62,3 +62,41 @@ if (command === 'add') {
 }
 terminal : node any.js add
 -> Adding note! 가 출력</code></pre>
+
+# ArrowFunction
+------------------------------
+function을 만드는 여러가지 방법
+1. const square = function(x){return x*x} // 일반적인 형태
+2. const square = (x) =>{return x*x} //arrow-function 형태
+3. const square = (x) => x*x // arrow-function 형태 return만 한다면 {} 필요 없음
+4. 보통 함수 or 객체들은 자기자신을 가리키는 "this"바인딩이 존재 
+   하지만 arrow-function은 "this" 바인딩이 존재하지않음!!
+<pre><code>
+EX1) 일반적인 형태
+const event = {name:'Party',
+                   guestList:['Lee','Han','Huh'] //string 배열
+                   printGuestList: function(){
+                   console.log('Guest list for '+this.name)
+              this.guestList.forEach((guest))=>{
+              console.log(guest + ' is attending '+ this.name)})
+              } //event 객체 생성
+              event.printGuestList() // printGuestList 함수 호출
+EX2)
+printGuestList(){
+console.log('Guest list for '+this.name)} // 이렇게도 함수 선언 가능!
+EX3) 에러!
+printGuestList(){
+        console.log('Guest list for '+ this.name)
+
+        this.guestList.forEach(function(guest){
+            console.log(guest + ' is attending '+ this.name)
+        }) // 오류발생!! this.name 이 부모의 this와 바인딩 하지 못함! 
+           //이럴땐 arrow-function을 사용한다 자신의 "this"바인딩이 존재하지 않기 때문
+EX3) 수정
+printGuestList(){
+        console.log('Guest list for '+ this.name)
+
+        this.guestList.forEach((guest)=>{
+            console.log(guest + ' is attending '+ this.name)
+        })
+        <

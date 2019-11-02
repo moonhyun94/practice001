@@ -7,7 +7,7 @@
 * node (file name).js 를 이용하여 terminal에서 execution 할수있다.
 * cd ../(folder name) << changing directory
  
-# 문법
+# 문법 & 메소드
 -------------------------------
 * const 변수이름 = 'data'// 변수 설정
 * console.log('hello') // 출력문
@@ -20,6 +20,9 @@
 - 다른 파일 동기화 하려면 require('./file name')을 해주면 된다.다른 파일에 있는 변수 함수 등등..은 넘어가지않음!
 - 다른 파일에 있는 변수, 함수 등등.. 을 공유하고싶다면 module.exports = var name or func name 그리고 require('./file name') 의 return 값을 저장할 const var 를 설정해준다. ex) const name = require('./ustils.js')
 * 함수 const add = function(){}
+- forEach() // 주어진 함수를 배열 요소 각각에 실행함
+- filter() // 주어진 함수의 조건을 통과한 모든 요소들을 새로운 배열로 반환
+- find() 
 
 # NPM Module
 ------------------------------
@@ -35,6 +38,7 @@
            Customizing yargs version : yargs.version('1.1.0') and execute node any.js --version int terminal
 EX)
 <pre><code>
+커맨드 사용
 termianl : node any.js add(setting a function) --(adding options to the function)title="Things to buy"
 code: const yargs = require('yargs')
 console.log(yargs.argv)
@@ -83,7 +87,7 @@ const event = {name:'Party',
               event.printGuestList() // printGuestList 함수 호출
 EX2)
 printGuestList(){
-console.log('Guest list for '+this.name)} // 이렇게도 함수 선언 가능!
+console.log('Guest list for '+this.name)} // 이렇게도 함수 선언 가능! ES6 방식
 EX3) 에러!
 printGuestList(){
         console.log('Guest list for '+ this.name)
